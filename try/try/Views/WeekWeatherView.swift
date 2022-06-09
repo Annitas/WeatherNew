@@ -15,7 +15,7 @@ struct WeekWeatherView: View {
             HStack(spacing: 20) {
                 ForEach(cityVM.weather.hourly) { weather in
                     let icon = cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
-                    let hour = cityVM.getDayFor(timestamp: weather.dt)//dt??
+                    let hour = cityVM.getDayFor(timestamp: weather.dt)
                     let temp = cityVM.getTempFor(temp: weather.temp)
                     getHourlyView(hour: hour, image: icon, temp: temp)
                 }
@@ -27,12 +27,12 @@ struct WeekWeatherView: View {
         VStack(spacing: 20) {
             Text(hour)
             image
-                .foregroundColor(.yellow)
+                .foregroundColor(.white)
             Text(temp)
         }
         .foregroundColor(.white)
         .padding()
-        .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color("#73d6fa"), Color("#ccf0fc")]), startPoint: .topLeading, endPoint: .bottomTrailing)))
+        .background(RoundedRectangle(cornerRadius: 5).fill(LinearGradient(gradient: Gradient(colors: [Color("KvColor"), Color("KvbColor")]), startPoint: .topLeading, endPoint: .bottomTrailing)))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 2, y: 2)
     }

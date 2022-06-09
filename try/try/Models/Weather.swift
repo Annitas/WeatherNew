@@ -6,7 +6,6 @@
 //
 
 import Foundation
-// MARK: - Current
 struct Weather: Codable, Identifiable {
     var dt: Int
     var temp: Double

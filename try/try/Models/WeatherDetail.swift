@@ -6,7 +6,7 @@
 //
 
 import Foundation
-// MARK: - Weather
+
 struct WeatherDetail: Codable {
     var main: String
     var description: String
