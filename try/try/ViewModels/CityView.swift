@@ -81,7 +81,8 @@ final class CityView: ObservableObject {
         return String(format: "%0.1f", temp)
     }
     
-    //MARK: -DAY
+
+    
     
     func getDayFor(timestamp: Int) -> String {
         return dayFormatter.string(from: Date(timeIntervalSince1970: TimeInterval(timestamp)))
@@ -115,49 +116,6 @@ final class CityView: ObservableObject {
             case .failure(let err):
                 print(err)
             }
-        }
-    }
-    
-    func getAnimationFor(icon: String) -> String {
-        switch icon {
-        case "01d":
-            return "sun.max.fill"
-        case "01n":
-            return "moon.fill"
-        case "02d":
-            return "cloud.sun.fill"
-        case "02n":
-            return "cloud.moon.fill"
-        case "03d":
-            return "smoke.fill"
-        case "03n":
-            return "cloud.moon.fill"
-        case "04d":
-            return "cloud.fill"
-        case "04n":
-            return "cloud.moon.fill"
-        case "09d":
-            return "cloud.heavyrain.fill"
-        case "09n":
-            return "cloud.moon.rain.fill"
-        case "10d":
-            return "cloud.sun.rain.fill"
-        case "10n":
-            return "cloud.rain.fill"
-        case "11d":
-            return "cloud.bolt.rain.fill"
-        case "11n":
-            return "cloud.moon.bolt.fill"
-        case "13d":
-            return "cloud.snow.fill"
-        case "13n":
-            return "cloud.snow.fill"
-        case "50d":
-            return "smoke.fill"
-        case "50n":
-            return "smoke.fill"
-        default:
-            return "sun.max.fill"
         }
     }
     
