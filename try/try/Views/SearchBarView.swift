@@ -32,7 +32,7 @@ struct SearchBarView: View {
             Image(systemName: "magnifyingglass.circle.fill")
                                     .font(.title3)
                                     .foregroundColor(.white)
-                                    .padding()
+                                    .padding(.leading, 10)
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.blue.opacity(0.5))
         })
