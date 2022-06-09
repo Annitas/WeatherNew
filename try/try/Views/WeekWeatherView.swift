@@ -15,7 +15,7 @@ struct WeekWeatherView: View {
             HStack(spacing: 20) {
                 ForEach(cityVM.weather.hourly) { weather in
                     let icon = cityVM.getWeatherIconFor(icon: weather.weather.count > 0 ? weather.weather[0].icon : "sun.max.fill")
-                    let hour = cityVM.getDayFor(timestamp: weather.dt)
+                    let hour = cityVM.getTimeFor(timestamp: weather.dt)
                     let temp = cityVM.getTempFor(temp: weather.temp)
                     getHourlyView(hour: hour, image: icon, temp: temp)
                 }

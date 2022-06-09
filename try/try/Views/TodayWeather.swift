@@ -17,7 +17,7 @@ struct TodayWeather: View {
                 .bold()
             
             HStack(spacing: 20) {
-                cityVM.getWeatherIconFor(icon: cityVM.weatherIcon)//дай бог сработает
+                cityVM.getWeatherIconFor(icon: cityVM.weatherIcon)
                     .frame(width: 100, height: 100)
                 
                 VStack (alignment: .leading) {
@@ -37,7 +37,7 @@ struct TodayWeather: View {
             }
         }
         .padding()
-        .foregroundColor(.white)//GRADIENT
+        .foregroundColor(.white)
         .background(RoundedRectangle(cornerRadius: 20).fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.5), Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing)).opacity(0.3))
         .shadow(color: Color.white.opacity(0.1), radius: 2, x: -2, y: -2)
         .shadow(color: Color.black.opacity(0.2), radius: 2, x: 2, y: 2)
